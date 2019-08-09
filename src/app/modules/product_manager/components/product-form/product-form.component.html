@@ -1,0 +1,172 @@
+<form>
+  <div
+    class="nb-theme-default flex-wrap d-flex pd-10 flex-row flex-md-column flex-lg-row align-items-start"
+  >
+    <div class="col-lg-4 pd-x-5 mg-b-10">
+      <div class="fieldset-wrap">
+        <fieldset class="form-fieldset">
+          <legend>GENERAL INFO</legend>
+          <div class="form-row">
+            <div class="form-group col lg-field">
+              <label>Project</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col xs-field">
+              <label>Unit</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col xs-field">
+              <label>Block</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col xs-field">
+              <label>Phase</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>Product Type</label>
+              <ng-select
+                class="select-form"
+                [items]=""
+                bindLabel=""
+                dropdownPosition="auto"
+                bindValue=""
+                labelForId=""
+                placeholder="Product Type"
+                [virtualScroll]="true"
+                formControlName=""
+              >
+              </ng-select>
+            </div>
+            <div class="form-group col md-field">
+              <label>Transaction Type</label>
+              <ng-select
+                class="select-form"
+                [items]=""
+                bindLabel=""
+                dropdownPosition="auto"
+                bindValue=""
+                labelForId=""
+                placeholder="Product Type"
+                [virtualScroll]="true"
+                formControlName=""
+              >
+              </ng-select>
+            </div>
+            <div class="form-group col md-field">
+              <label>Status</label
+              ><ng-select
+                class="select-form"
+                [items]=""
+                bindLabel=""
+                dropdownPosition="auto"
+                bindValue=""
+                labelForId=""
+                placeholder="Product Type"
+                [virtualScroll]="true"
+                formControlName=""
+              >
+              </ng-select>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="col-lg-8 pd-x-5">
+      <div class="fieldset-wrap">
+        <fieldset class="form-fieldset">
+          <legend>Product Location</legend>
+          <div class="form-row">
+            <div class="form-group col lg-field">
+              <label>Street</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col sm-field">
+              <label>Ext. Number</label
+              ><input type="number" class="form-control" />
+            </div>
+            <div class="form-group col sm-field">
+              <label>Int. Unit</label
+              ><input type="number" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>City</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>County</label
+              ><ng-select
+                class="select-form"
+                [items]=""
+                bindLabel=""
+                dropdownPosition="auto"
+                bindValue=""
+                labelForId=""
+                placeholder="Product Type"
+                [virtualScroll]="true"
+                formControlName=""
+              >
+              </ng-select>
+            </div>
+            <div class="form-group col md-field">
+              <label>State</label
+              ><ng-select
+                class="select-form"
+                [items]=""
+                bindLabel=""
+                dropdownPosition="auto"
+                bindValue=""
+                labelForId=""
+                placeholder="Product Type"
+                [virtualScroll]="true"
+                formControlName=""
+              >
+              </ng-select>
+            </div>
+            <div class="form-group col sm-field">
+              <label>Zip Code</label
+              ><input type="number" class="form-control" />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="fieldset-wrap">
+        <fieldset class="form-fieldset">
+          <legend>Product Details</legend>
+          <div class="form-row mg-b-10">
+            <div class="form-group col">
+              <label>Description</label
+              ><textarea class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col sm-field">
+              <label>Quantity</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>Base Price</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>Suggested Price</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>Unit Cost</label><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col sm-field">
+              <label>Dimensions</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col sm-field">
+              <label>Dimension Units</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>Make (If Any)</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="form-group col md-field">
+              <label>Model (If Any)</label
+              ><input type="text" class="form-control" />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</form>

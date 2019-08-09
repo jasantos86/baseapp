@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"breadcrumbs.enabled": false,
+		"npm-intellisense.packageSubfoldersIntellisense": true
+	}
+}

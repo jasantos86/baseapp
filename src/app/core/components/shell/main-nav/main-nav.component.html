@@ -1,0 +1,45 @@
+<ul class="nav navbar-menu">
+  <li
+    *ngFor="let item of menuItems"
+    class="nav-item"
+    routerLinkActive="active"
+    [ngClass]="{
+      'with-sub': item.type === 'dropdown'
+    }"
+    ngbDropdown
+  >
+    <button
+      *ngIf="item.routerLink !== undefined; else dropdownBtn"
+      [routerLink]="item.routerLink"
+      href="javascript:void()"
+      class="btn nav-link"
+    >
+    </button>
+
+    <ng-template #dropdownBtn>
+        <button
+          class="btn nav-link"
+          id="dd_{{ item.id }}"
+          [ngClass]="{ 'dropdown-toggle': false }"
+          ngbDropdownToggle
+        >
+          <i-feather name="pie-chart"></i-feather>
+          {{ item.title }}
+        </button>
+      </ng-template>
+
+    <ul
+      *ngIf="item.type === 'dropdown'"
+      class="navbar-menu-sub"
+      attr.aria-labelledby="dd_{{ item.id }}"
+      ngbDropdownMenu
+    >
+      <li class="nav-sub-item" *ngFor="let submenu of item.submenus">
+        <a class="nav-sub-link" href="javascript:void()" [routerLink]="submenu.routerLink">
+          <i-feather name="pie-chart"></i-feather>
+          {{ submenu.title }}
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>

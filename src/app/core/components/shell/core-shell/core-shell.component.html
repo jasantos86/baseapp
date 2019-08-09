@@ -1,0 +1,9 @@
+<mat-drawer-container hasBackdrop="true" class="page-container">
+  <mat-drawer #drawer mode="over" [opened]="getSideBarState()" (closedStart)="setSideBarState(false)" >
+    <side-nav></side-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <core-header></core-header>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>

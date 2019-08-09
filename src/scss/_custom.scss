@@ -1,0 +1,57 @@
+// Material Theme Overwrites
+
+.mat-drawer-container{
+  background-color: #fff !important;
+  color: rgba(0,0,0,.87) !important;
+  }
+
+
+// Responsive Flex Form Variant
+
+.flex-wrap .form-row > .col.lg-field, .flex-wrap .form-row > [class*="col-"].lg-field {
+    min-width: 15.625rem;
+  }
+  
+  .flex-wrap .form-row > .col.md-field, .flex-wrap .form-row > [class*="col-"].md-field {
+    min-width: 9.375rem;
+  }
+  
+  .flex-wrap .form-row > .col.sm-field, .flex-wrap .form-row > [class*="col-"].sm-field {
+    min-width: 6.25rem;
+  }
+  
+  .flex-wrap .form-row > .col.xs-field, .flex-wrap .form-row > [class*="col-"].xs-field {
+    min-width: 3rem;
+  }
+  
+  .form-fieldset.col, .form-fieldset[class*="col-"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .flexform {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  
+  .fieldset-wrap {
+    margin-bottom: 10px;
+  }
+  
+  .fieldset-wrap:last-child {
+    margin-bottom: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /// Feather Icons
+  button > i-feather {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    svg {
+        stroke-width: 2px;
+    }
+  }

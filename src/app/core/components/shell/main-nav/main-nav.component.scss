@@ -1,0 +1,8 @@
+.navbar-menu-sub{
+    &::before {
+        left: 45px
+    }
+    &::after {
+        left: 46px;
+    }
+}

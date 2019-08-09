@@ -1,0 +1,25 @@
+<ngx-datatable
+  class="forgeTable striped boxed"
+  [rows]="rows$ | async"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="40"
+  [rowHeight]="40"
+  [footerHeight]="40"
+  [scrollbarV]="true"
+>
+    <ngx-datatable-column prop="project.projectName" name="Project" [flexGrow]="2" minWidth="130"></ngx-datatable-column>
+    <ngx-datatable-column prop="internalUnit" name="Unit" minWidth="40" [flexGrow]="1" cellClass="center" headerClass="center"></ngx-datatable-column>
+    <ngx-datatable-column prop="internalBlock" name="Block" minWidth="40" [flexGrow]="1" ccellClass="center d-none d-lg-block" headerClass="center d-none d-lg-block"></ngx-datatable-column>
+    <ngx-datatable-column prop="productType" name="Type" [flexGrow]="2" minWidth="120"></ngx-datatable-column>
+    <ngx-datatable-column prop="suggestedPrice" name="Price" cellClass="center d-none d-lg-block" headerClass="center d-none d-lg-block" [flexGrow]="1" minWidth="125" maxWidth="130" [pipe]="currencyPipe"></ngx-datatable-column>
+    <ngx-datatable-column prop="productStatus" name="Status" cellClass="center d-none d-md-block" headerClass="center d-none d-md-block" [flexGrow]="1" minWidth="100"></ngx-datatable-column>
+    <ngx-datatable-column prop="uid" name="" cellClass="cellActions" [flexGrow]="1" maxWidth="60" minWidth="60">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <div class="action-buttons">
+                <button type="button" class="btn btn-icon btn-light " (click)="editRow(value)"><i-feather name="Edit3"></i-feather></button>
+                <button type="button" class="btn btn-icon btn-danger " (click)="deleteRow(value)"><i-feather name="Trash2"></i-feather></button>
+            </div>
+        </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable>

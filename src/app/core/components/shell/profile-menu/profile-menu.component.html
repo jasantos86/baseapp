@@ -1,0 +1,67 @@
+<ng-template #defaultPhotoURL>
+    <img
+      src="https://via.placeholder.com/500"
+      class="rounded-circle"
+      alt=""
+    />
+</ng-template>
+<div class="dropdown dropdown-profile" ngbDropdown>
+  <button
+    id="dd_profile"
+    class="btn btn-icon"
+    [ngClass]="{ 'dropdown-toggle': false }"
+    ngbDropdownToggle
+  >
+    <div class="avatar avatar-sm">
+      <ng-container *ngIf="(profile$ | async).photoURL; else defaultPhotoURL">
+        <img
+          [src]="(profile$ | async).photoURL"
+          class="rounded-circle"
+          alt=""
+        />
+      </ng-container>
+    </div>
+  </button>
+  <!-- dropdown-link -->
+  <div
+    class="dropdown-menu dropdown-menu-right tx-13"
+    aria-labelledby="dd_profile"
+    ngbDropdownMenu
+  >
+    <div class="avatar avatar-lg mg-b-15">
+      <ng-container *ngIf="(profile$ | async).photoURL; else defaultPhotoURL">
+        <img
+          [src]="(profile$ | async).photoURL"
+          class="rounded-circle"
+          alt=""
+        />
+      </ng-container>
+    </div>
+    <h6 class="tx-semibold mg-b-5">{{(profile$|async).displayName}}</h6>
+    <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+
+    <a href="" class="dropdown-item"
+      ><i-feather name="edit-3"></i-feather> Edit Profile</a
+    >
+    <a href="page-profile-view.html" class="dropdown-item"
+      ><i-feather name="user"></i-feather> View Profile</a
+    >
+    <div class="dropdown-divider"></div>
+    <a href="page-help-center.html" class="dropdown-item"
+      ><i-feather name="help-circle"></i-feather> Help Center</a
+    >
+    <a href="" class="dropdown-item"
+      ><i-feather name="life-buoy"></i-feather> Forum</a
+    >
+    <a href="" class="dropdown-item"
+      ><i-feather name="settings"></i-feather>Account Settings</a
+    >
+    <a href="" class="dropdown-item"
+      ><i-feather name="settings"></i-feather>Privacy Settings</a
+    >
+    <button routerLink="/auth/logout" class="btn dropdown-item"
+      ><i-feather name="log-out"></i-feather>Sign Out</button
+    >
+  </div>
+  <!-- dropdown-menu -->
+</div>
